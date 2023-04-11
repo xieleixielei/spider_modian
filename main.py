@@ -28,7 +28,7 @@ find_starttime2 = re.compile(r'<h3>(.*?)</h3>')
 find_endtime = re.compile(r'end_time="(.*?)"')
 find_remaintime = re.compile(r'<h3(.*?)\b(start_time|end_time)\b(.*?)>(.*?)</h3>')
 
-savepath = "摩点众筹all.xls"  # 当前目录新建XLS，存储进去
+savepath = "摩点众筹-主要信息.xls"  # 当前目录新建XLS，存储进去
 idea_key = 0
 going_key = 0
 preheat_key = 0
