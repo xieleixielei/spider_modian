@@ -3,9 +3,12 @@
 这是一个用于爬取摩点众筹网站数据的爬虫，采用Python语言编写。
 
 ### 安装
-下载代码：git clone https://github.com/xieleixielei/spider_modian.git
-进入项目目录：cd spider_modian
-安装依赖：pip install -r requirements.txt
+1.下载代码：git clone https://github.com/xieleixielei/spider_modian.git
+
+2.进入项目目录：cd spider_modian
+
+3.安装依赖：pip install -r requirements.txt
+
 ### 使用
 1.安装依赖所需要的包：
 如：
@@ -14,6 +17,7 @@
 - bs4
 - re
 - xlwt
+
 2.运行main.py文件：
 python main.py
 爬取的数据将会保存在excel中。
