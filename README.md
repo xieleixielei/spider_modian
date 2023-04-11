@@ -7,7 +7,6 @@
 
 2.进入项目目录：cd spider_modian
 
-3.安装依赖：pip install -r requirements.txt
 
 ### 使用
 1.安装依赖所需要的包：
