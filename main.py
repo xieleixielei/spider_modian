@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup  # 网页解析，获取数据
 import spiders_re as my_re
 from openpyxl import Workbook
 from openpyxl.utils.exceptions import IllegalCharacterError
-
+# 正则
 findLink = re.compile(r'<a href="(.*?)"')
 findImgSrc = re.compile(r'<img.*src="(.*?)"', re.S)
 findTitle = re.compile(r'<h3 class="pro_title">(.*)</h3>')
@@ -20,20 +20,21 @@ findmoney = re.compile(r'<span backer_money="(\d+)">(.*)</span>')
 findrate = re.compile(r'rate="(\d+)">(.*)</span>')
 findgoal = re.compile(r'<span class="goal-money">目标金额 (.*)</span>')
 findsponsor = re.compile(r'<span backer_count="(\d+)">(.*)</span>')
-
 # detail page
 find_starttime = re.compile(r'start_time="(.*?)"')
 find_starttime2 = re.compile(r'<h3>(.*?)</h3>')
-
 find_endtime = re.compile(r'end_time="(.*?)"')
 find_remaintime = re.compile(r'<h3(.*?)\b(start_time|end_time)\b(.*?)>(.*?)</h3>')
 
+# 储存路径
 savepath = "摩点众筹-主要信息.xls"  # 当前目录新建XLS，存储进去
+# 状态信息
 idea_key = 0
 going_key = 0
 preheat_key = 0
 success_key = 0
 fail_key=0
+
 global sheet
 global book
 global itemreal_class
@@ -48,16 +49,6 @@ baseurl_list = [
                 "https://zhongchou.modian.com/all/top_time/idea/"
                 ]
 def main():
-    global book_all, update_sheet, author_sheet
-    book_all = Workbook()
-    update_sheet = book_all.create_sheet(title='update')
-    author_sheet = book_all.create_sheet(title='author')
-    # 添加表头
-    header = ['项目id', '次数', '时间', '内容', '图片', '系统更新', '评论数', '点赞', '抽奖', '开奖']
-    update_sheet.append(header)
-    row = ['项目id', '作者名称', '星标', '星标tag', '支持项目数', '头像图片']
-    author_sheet.append(row)
-
     global book
     book = xlwt.Workbook(encoding="utf-8", style_compression=0)  # 创建workbook对象
     global success_key, going_key, preheat_key, idea_key, fail_key, sheet
@@ -77,7 +68,6 @@ def main():
 
 
 def get_authorapi(uid):
-
     home_url = "https://apim.modian.com/apis/comm/user/user_info"
     params = {"json_type": 1, "to_user_id": uid, "user_id": uid}
     # "timestamp": int(time.time())
