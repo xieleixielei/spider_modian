@@ -1,7 +1,8 @@
 注：本仓库爬取信息仅用以研究用途，作者为爬虫初学者，代码不良之处可依需修改
 ## spider_modian
-这是一个用于爬取摩点众筹网站数据的爬虫，采用Python语言编写。
 
+
+这是一个用于爬取摩点众筹网站数据的爬虫，采用Python语言编写。欢迎star:dizzy::dizzy::dizzy:
 ### 安装
 1.下载代码：git clone https://github.com/xieleixielei/spider_modian.git
 
