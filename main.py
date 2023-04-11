@@ -40,6 +40,7 @@ global itemreal_class
 datalist = []  # 用来存储爬取的网页信息
 excelindex = 0
 not_fail_id=[]
+# 可分类爬取
 baseurl_list = [
                 # "https://zhongchou.modian.com/all/top_time/success/",
                 # "https://zhongchou.modian.com/all/top_time/going/",
